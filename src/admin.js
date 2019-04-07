@@ -4,9 +4,9 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import NavLeft from './components/NavLeft'
 import './style/common.less'
-
 import Home from './pages/hemo'
-export default class admin extends Component {
+
+export default class Admin extends Component {
   render() {
     return (
       <Row className="container">
@@ -16,8 +16,8 @@ export default class admin extends Component {
         <Col span={21} className="main">
           <Header>Header</Header>
           <Row className="content">
-            <Home />
-            {/* {this.props.children} */}
+            {/* <Home />  */}
+            {this.props.children}
           </Row>
           <Footer>Footer</Footer>
         </Col>
