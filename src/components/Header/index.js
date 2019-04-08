@@ -4,7 +4,8 @@ import './index.less'
 import dayjs from 'dayjs'
 import axios from './../../axios'
 
-const baiduAPI = 'http://api.map.baidu.com/telematics/v3/weather?location=beijing&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
+const baiduAPI =
+  'http://api.map.baidu.com/telematics/v3/weather?location=beijing&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
 
 export default class Header extends Component {
   componentWillMount() {
@@ -20,20 +21,22 @@ export default class Header extends Component {
     }, 1000)
     this.getWeatherAPIData()
   }
-  getWeatherAPIData(){
-    axios.jsonp({
-      url:baiduAPI
-    }).then((response)=>{
-      if(response.status ==='success'){
-        let data = response.results[0].weather_data[0]
-        console.log(data)
-        this.setState({
-          dayPictureUrl:data.dayPictureUrl,
-          weather:data.weather
-        })
-      }
-      // console.log(response)
-    })
+  getWeatherAPIData() {
+    axios
+      .jsonp({
+        url: baiduAPI
+      })
+      .then(response => {
+        if (response.status === 'success') {
+          let data = response.results[0].weather_data[0]
+          console.log(data)
+          this.setState({
+            dayPictureUrl: data.dayPictureUrl,
+            weather: data.weather
+          })
+        }
+        // console.log(response)
+      })
   }
   render() {
     return (
@@ -41,7 +44,8 @@ export default class Header extends Component {
         <Row className="header-top">
           <Col span={24}>
             <span>欢迎,{this.state.userName}</span>
-            <a href="#">退出</a>
+            {/* <a href="#">退出</a> */}
+            <span>退出</span>
           </Col>
         </Row>
         <Row className="breadcrumb">
@@ -51,7 +55,7 @@ export default class Header extends Component {
           <Col span={20} className="weather">
             <span className="date">{this.state.sysTime}</span>
             <span className="weather-img">
-              <img src={this.state.dayPictureUrl} alt=""></img>
+              <img src={this.state.dayPictureUrl} alt="" />
             </span>
             <span className="weater-detail">{this.state.weather}</span>
           </Col>

@@ -3,7 +3,6 @@ import { Menu } from 'antd'
 import './index.less'
 import { NavLink } from 'react-router-dom'
 import MenuConfig from './../../config/menuList'
-import { from } from 'rxjs'
 const SubMenu = Menu.SubMenu
 // const MenuItemGroup = Menu.ItemGroup
 
@@ -39,7 +38,7 @@ export default class NavLeft extends Component {
       <div>
         <div className="logo">
           <img src="/assets/logo-ant.svg" alt="" />
-          <h1>Imooc Ms</h1>
+          <h1>Ms Admin</h1>
         </div>
         <Menu theme="dark">{this.state.menuTreeNode}</Menu>
       </div>
