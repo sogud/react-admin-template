@@ -22,13 +22,25 @@ export default class Carousels extends React.Component {
         <Card title="图片轮播" className="slider-wrap">
           <Carousel autoplay effect="fade">
             <div>
-              <img src="/carousel-img/carousel-1.jpg" alt="" />
+              <img
+                style={{ width: '100%' }}
+                src="/carousel-img/carousel-1.jpg"
+                alt=""
+              />
             </div>
             <div>
-              <img src="/carousel-img/carousel-2.jpg" alt="" />
+              <img
+                style={{ width: '100%' }}
+                src="/carousel-img/carousel-2.jpg"
+                alt=""
+              />
             </div>
             <div>
-              <img src="/carousel-img/carousel-3.jpg" alt="" />
+              <img
+                style={{ width: '100%' }}
+                src="/carousel-img/carousel-3.jpg"
+                alt=""
+              />
             </div>
           </Carousel>
         </Card>

@@ -27,6 +27,7 @@ export default class Gallery extends React.Component {
           cover={
             <img
               src={'/gallery/' + item}
+              alt=""
               onClick={() => this.openGallery(item)}
             />
           }
