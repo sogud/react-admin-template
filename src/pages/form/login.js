@@ -68,7 +68,7 @@ class FormLogin extends Component {
                 valuePropName: 'checked',
                 initialValue: true
               })(<Checkbox>记住密码</Checkbox>)}
-              <a style={{ float: 'right' }} href="#">
+              <a style={{ float: 'right' }} href="javascript:;">
                 忘记密码
               </a>
               {/* <Button

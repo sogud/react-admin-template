@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Card, Row, Col, Modal } from 'antd'
 
-export default class Gallery extends React.Component {
+export default class Gallery extends Component {
   state = {
     visible: false
   }
