@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'antd'
 import './index.less'
-import dayjs from 'dayjs'
+import moment from 'moment'
 import axios from './../../axios'
 
 const baiduAPI =
@@ -14,7 +14,7 @@ export default class Header extends Component {
     })
 
     setInterval(() => {
-      let sysTime = dayjs().format('YYYY-MM-DD HH:mm:ss')
+      let sysTime = moment().format('YYYY-MM-DD HH:mm:ss')
       this.setState({
         sysTime
       })
@@ -44,8 +44,7 @@ export default class Header extends Component {
         <Row className="header-top">
           <Col span={24}>
             <span>欢迎,{this.state.userName}</span>
-            {/* <a href="#">退出</a> */}
-            <span>退出</span>
+            <a href="#">退出</a>
           </Col>
         </Row>
         <Row className="breadcrumb">
