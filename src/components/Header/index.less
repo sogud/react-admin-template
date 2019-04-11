@@ -1,5 +1,4 @@
 @import './../../style/default.less';
-
 .header {
   background-color: @colorM;
   .header-top {
@@ -7,6 +6,18 @@
     line-height: 60px;
     padding: 0 20px;
     text-align: right;
+    .logo {
+      line-height: 60px;
+      text-align: left;
+      font-size: 18px;
+      img {
+        height: 40px;
+        vertical-align: middle;
+      }
+      span {
+        margin-left: 5px;
+      }
+    }
     a {
       margin-left: 40px;
     }
@@ -22,26 +33,23 @@
       &:after {
         position: absolute;
         content: '';
-        left: 135px;
-        top: 40px;
-        // width: 10px;
+        left: 73px;
+        top: 39px;
         border-top: 9px solid @colorM;
-        border-left: 12px solid rgba(0, 0, 0, 0);
-        border-right: 12px solid rgba(0, 0, 0, 0);
-        // height: 10px;
-        // background-color: red;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
       }
     }
     .weather {
       text-align: right;
-      font-size: 15px;
+      font-size: 14px;
       .date {
         margin-right: 10px;
+        vertical-align: middle;
       }
       .weather-img {
-        margin: 0 8px;
         img {
-          height: 16px;
+          height: 15px;
         }
       }
       .weather-detail {
@@ -49,5 +57,11 @@
         vertical-align: middle;
       }
     }
+  }
+}
+.simple-page {
+  .header-top {
+    background: #1890ff;
+    color: @colorM;
   }
 }

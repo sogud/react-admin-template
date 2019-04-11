@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Card, Carousel } from 'antd'
 import './../ui.less'
 
-export default class Carousels extends React.Component {
+export default class Carousels extends Component {
   render() {
     return (
       <div>
